@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.musicapp.SongsMainActivity">
+    tools:context="com.example.android.musicapp.ArtistsActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/albums_toolbar"
+        android:id="@+id/artists_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimaryDark"
@@ -16,19 +16,15 @@
         android:theme="@style/MyActionBarTheme"
         app:popupTheme="@style/MyPopUpTheme" />
 
-    <GridView
-        android:paddingRight="@dimen/horizontal_margin_app"
-        android:paddingLeft="@dimen/horizontal_margin_app"
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist_list"
         android:paddingTop="@dimen/vertical_margin_app"
         android:paddingBottom="@dimen/vertical_margin_app"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/albums_grid"
-        android:numColumns="auto_fit"
-        android:columnWidth="@dimen/grid_item_width"
-        android:verticalSpacing="@dimen/grid_item_vertical_spacing"
-        android:horizontalSpacing="@dimen/grid_item_horizontal_spacing"
-        android:gravity="center"
-        android:stretchMode="spacingWidth">
-    </GridView>
+        android:paddingRight="@dimen/vertical_margin_app"
+        android:paddingLeft="@dimen/vertical_margin_app"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/artist_list_divider_height"/>
+
 </LinearLayout>

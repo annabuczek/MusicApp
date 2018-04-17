@@ -13,9 +13,11 @@
     <dimen name="grid_item_width">160dp</dimen>
     <dimen name="grid_item_vertical_spacing">24dp</dimen>
     <dimen name="grid_item_horizontal_spacing">8dp</dimen>
+    <dimen name="artist_list_divider_height">8dp</dimen>
 
     <!--Elevations-->
     <dimen name="player_elevation">4dp</dimen>
     <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

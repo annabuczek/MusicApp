@@ -8,7 +8,7 @@
     tools:context="com.example.android.musicapp.SongsMainActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/main_toolbar"
+        android:id="@+id/songs_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimaryDark"
@@ -18,7 +18,7 @@
 
     <ListView
         android:id="@+id/song_list"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/vertical_margin_app"
         android:paddingLeft="@dimen/horizontal_margin_app"

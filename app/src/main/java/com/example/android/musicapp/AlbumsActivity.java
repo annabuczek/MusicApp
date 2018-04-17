@@ -18,7 +18,7 @@ public class AlbumsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_albums);
 
 //        Set Toolbar as ActionBar
-        Toolbar mainToolbar = findViewById(R.id.main_toolbar);
+        Toolbar mainToolbar = findViewById(R.id.albums_toolbar);
         setSupportActionBar(mainToolbar);
 
 //        Create ArrayList of Albums
@@ -61,12 +61,17 @@ public class AlbumsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.album_menu_search:
+                return true;
 
             case R.id.album_menu_songs:
                 Intent s = new Intent(AlbumsActivity.this, SongsMainActivity.class);
                 startActivity(s);
+                return true;
 
             case R.id.album_menu_artists:
+                Intent a = new Intent(AlbumsActivity.this, ArtistsActivity.class);
+                startActivity(a);
+                return true;
 
             default:
         return super.onOptionsItemSelected(item);

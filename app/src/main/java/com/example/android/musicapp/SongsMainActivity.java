@@ -20,7 +20,7 @@ public class SongsMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_songs);
 
 //        Set Toolbar as ActionBar
-        Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        Toolbar mainToolbar = (Toolbar) findViewById(R.id.songs_toolbar);
         setSupportActionBar(mainToolbar);
 
 //      Create ArrayList of songs
@@ -80,13 +80,19 @@ public class SongsMainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.songs_menu_search:
+                return true;
 
             case R.id.songs_menu_albums:
 
-                Intent a = new Intent(SongsMainActivity.this, AlbumsActivity.class);
-                startActivity(a);
+                Intent al = new Intent(SongsMainActivity.this, AlbumsActivity.class);
+                startActivity(al);
+                return true;
 
             case R.id.songs_menu_artists:
+
+                Intent ar = new Intent(SongsMainActivity.this, ArtistsActivity.class);
+                startActivity(ar);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);

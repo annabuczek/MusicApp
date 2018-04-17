@@ -11,17 +11,21 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SongsMainActivity"
-            android:label="@string/song_activity_name">
+            android:label="@string/songs_activity_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".NowPlayingActivity"
-            android:label="@string/now_playing_activity_name"></activity>
-        <activity android:name=".AlbumsActivity"></activity>
+            android:label="@string/now_playing_activity_name" />
+        <activity
+            android:name=".AlbumsActivity"
+            android:label="@string/albums_activity_name"/>
+        <activity
+            android:name=".ArtistsActivity"
+            android:label="@string/artists_activity_name"/>
     </application>
 
 </manifest>
