@@ -25,25 +25,22 @@
         <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
-    <!-- Text style -->
-    <!-- Song activity -->
-    <style name="TitleListItemTextStyle">
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/colorAccent</item>
-    </style>
-
-    <style name="SubheadingListItemTextStyle">
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <!-- Now Playing activity -->
+    <!-- TEXT STYLES -->
     <style name="TextDisplay">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@color/colorAccent</item>
     </style>
+    <!-- Song activity -->
+    <style name="TitleListItemTextStyle" parent="TextDisplay">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SubheadingListItemTextStyle" parent="TextDisplay">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Now Playing activity -->
 
     <style name="TitleText" parent="TextDisplay">
         <item name="android:textSize">24sp</item>
@@ -57,4 +54,15 @@
     <style name="AlbumText" parent="TextDisplay">
         <item name="android:textSize">16sp</item>
     </style>
+
+    <!--Albums activity-->
+    <style name="TitleGridItemTextStyle" parent="TextDisplay">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SubheadingGridItemTextStyle" parent="TextDisplay">
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>

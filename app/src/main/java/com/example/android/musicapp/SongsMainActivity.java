@@ -56,7 +56,7 @@ public class SongsMainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Song selectedSong = songs.get(position);
 
-                Intent i = new Intent(SongsMainActivity.this, NowPlaying.class);
+                Intent i = new Intent(SongsMainActivity.this, NowPlayingActivity.class);
                 i.putExtra("SONG_TITLE", selectedSong.getTitle());
                 i.putExtra("SONG_ARTIST", selectedSong.getArtist());
                 i.putExtra("ALBUM_COVER", selectedSong.getAlbumCover());
@@ -71,7 +71,7 @@ public class SongsMainActivity extends AppCompatActivity {
 //    Create menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_songs, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -79,13 +79,14 @@ public class SongsMainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.search:
+            case R.id.songs_menu_search:
 
-            case R.id.songs:
+            case R.id.songs_menu_albums:
 
-            case R.id.albums:
+                Intent a = new Intent(SongsMainActivity.this, AlbumsActivity.class);
+                startActivity(a);
 
-            case R.id.artists:
+            case R.id.songs_menu_artists:
 
             default:
                 return super.onOptionsItemSelected(item);

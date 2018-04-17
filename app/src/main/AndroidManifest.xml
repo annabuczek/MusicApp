@@ -18,9 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NowPlaying"
-            android:label="@string/now_playing_activity_name">
-        </activity>
+        <activity
+            android:name=".NowPlayingActivity"
+            android:label="@string/now_playing_activity_name"></activity>
+        <activity android:name=".AlbumsActivity"></activity>
     </application>
 
 </manifest>

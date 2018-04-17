@@ -18,9 +18,10 @@ public class Song {
         this.albumCover = albumCover;
     }
 
-    public Song(String artist, String album) {
-        this.artist = artist;
+    public Song(String album, String artist, int albumCover) {
         this.album = album;
+        this.artist = artist;
+        this.albumCover = albumCover;
     }
 
     public Song(String artist) {

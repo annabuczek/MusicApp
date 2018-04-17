@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.musicapp.NowPlaying">
+    tools:context="com.example.android.musicapp.NowPlayingActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/now_playing_toolbar"
@@ -16,11 +16,11 @@
         app:popupTheme="@style/MyPopUpTheme" />
 
     <TextView
-        android:id="@+id/title_text_view"
+        android:id="@+id/song_title_text_view"
         style="@style/TitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/artist_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/song_artist_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         tools:text="Title" />
 
     <TextView
-        android:id="@+id/artist_text_view"
+        android:id="@+id/song_artist_text_view"
         style="@style/ArtistText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/song_title_text_view"
         tools:text="Artist" />
 
     <ImageView
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artist_text_view"/>
+        app:layout_constraintTop_toBottomOf="@+id/song_artist_text_view"/>
 
     <TextView
         android:id="@+id/album_text_view"

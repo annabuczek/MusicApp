@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Main margins-->
     <dimen name="horizontal_margin_app">16dp</dimen>
     <dimen name="vertical_margin_app">16dp</dimen>
 
+    <!--Paddings-->
+    <dimen name="padding_main">8dp</dimen>
+
+    <!--Items dimensions-->
     <dimen name="list_item_height">72dp</dimen>
     <dimen name="player_height">72dp</dimen>
-    <dimen name="player_elevation">4dp</dimen>
+    <dimen name="grid_item_width">160dp</dimen>
+    <dimen name="grid_item_vertical_spacing">24dp</dimen>
+    <dimen name="grid_item_horizontal_spacing">8dp</dimen>
 
-    <dimen name="padding_main">8dp</dimen>
+    <!--Elevations-->
+    <dimen name="player_elevation">4dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+
 </resources>
