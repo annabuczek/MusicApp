@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicapp.SongsMainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        android:elevation="4dp"
+        android:theme="@style/MyActionBarTheme"
+        app:popupTheme="@style/MyPopUpTheme" />
+
+    <ListView
+        android:id="@+id/song_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/vertical_margin_app"
+        android:paddingLeft="@dimen/horizontal_margin_app"
+        android:paddingRight="@dimen/horizontal_margin_app"
+        android:paddingTop="@dimen/vertical_margin_app" />
+
+</LinearLayout>
