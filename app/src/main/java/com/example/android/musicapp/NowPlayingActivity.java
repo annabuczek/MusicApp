@@ -1,6 +1,7 @@
 package com.example.android.musicapp;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,8 +15,13 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_playing);
 
+//        Set Toolbar as ActionBar
         Toolbar nowPlayingToolbar = findViewById(R.id.now_playing_toolbar);
         setSupportActionBar(nowPlayingToolbar);
+
+//        Set back button on Toolbar
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
 //        Get values from intent
         Intent i = getIntent();
@@ -30,7 +36,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         ImageView albumCoverImg = findViewById(R.id.album_cover_img);
         TextView albumTextView = findViewById(R.id.album_text_view);
 
-//        Set values
+//        Set values from intent to views
         titleTextView.setText(title);
         artistTextView.setText(artist);
         albumCoverImg.setImageResource(albumCover);
