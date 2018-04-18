@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:title="Search"
-        android:id="@+id/songs_menu_search"
-        android:icon="@drawable/search"
-        app:showAsAction="always"/>
+
     <item
         android:id="@+id/songs_menu_albums"
-        android:title="Albums"
+        android:title="@string/menu_title_albums"
         app:showAsAction="never"/>
     <item
         android:id="@+id/songs_menu_artists"
-        android:title="Artists"
+        android:title="@string/menu_title_artists"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/songs_menu_exit"
+        android:title="@string/menu_title_exit"
+        app:showAsAction="never"/>
+
+
 
 </menu>

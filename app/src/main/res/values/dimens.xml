@@ -4,7 +4,7 @@
     <dimen name="horizontal_margin_app">16dp</dimen>
     <dimen name="vertical_margin_app">16dp</dimen>
 
-    <!--Paddings-->
+    <!--Padding-->
     <dimen name="padding_main">8dp</dimen>
 
     <!--Items dimensions-->
@@ -18,6 +18,5 @@
     <!--Elevations-->
     <dimen name="player_elevation">4dp</dimen>
     <dimen name="toolbar_elevation">4dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

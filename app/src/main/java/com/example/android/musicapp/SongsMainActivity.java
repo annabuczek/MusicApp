@@ -1,8 +1,8 @@
 package com.example.android.musicapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -72,6 +72,7 @@ public class SongsMainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_songs, menu);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -79,8 +80,6 @@ public class SongsMainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.songs_menu_search:
-                return true;
 
             case R.id.songs_menu_albums:
 
@@ -92,6 +91,14 @@ public class SongsMainActivity extends AppCompatActivity {
 
                 Intent ar = new Intent(SongsMainActivity.this, ArtistsActivity.class);
                 startActivity(ar);
+                return true;
+
+            case R.id.songs_menu_exit:
+
+                Intent ex = new Intent(Intent.ACTION_MAIN);
+                ex.addCategory(Intent.CATEGORY_HOME);
+                ex.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(ex);
                 return true;
 
             default:

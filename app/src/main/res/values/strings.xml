@@ -4,4 +4,9 @@
     <string name="now_playing_activity_name">Now Playing</string>
     <string name="artists_activity_name">Artists</string>
     <string name="albums_activity_name">Albums</string>
+
+    <string name="menu_title_songs">Songs</string>
+    <string name="menu_title_albums">Albums</string>
+    <string name="menu_title_artists">Artists</string>
+    <string name="menu_title_exit">Exit</string>
 </resources>

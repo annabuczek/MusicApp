@@ -17,8 +17,13 @@ import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
-    SongAdapter(Activity context, ArrayList<Song> songsList) {
-        super(context, 0, songsList);
+    private ArrayList<Song> songsList;
+    private final ArrayList<Song> fullSongsList = new ArrayList<>();
+
+    SongAdapter(Activity context, ArrayList<Song> songList) {
+        super(context, 0, songList);
+        this.songsList = songList;
+        fullSongsList.addAll(songsList);
     }
 
     @NonNull
@@ -39,4 +44,6 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         return convertView;
     }
+
 }
+
