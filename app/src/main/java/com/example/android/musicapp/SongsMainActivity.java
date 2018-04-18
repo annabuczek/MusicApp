@@ -19,43 +19,46 @@ public class SongsMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_songs);
 
-//        Set Toolbar as ActionBar
-        Toolbar mainToolbar = (Toolbar) findViewById(R.id.songs_toolbar);
+//        Set custom Toolbar as ActionBar for activity
+        Toolbar mainToolbar = findViewById(R.id.songs_toolbar);
         setSupportActionBar(mainToolbar);
 
-//      Create ArrayList of songs
-        final ArrayList<Song> songs = new ArrayList<Song>();
+//      Create ArrayList of Music objects, representing songs
+        final ArrayList<Music> songs = new ArrayList<Music>();
 
-        songs.add(new Song("Enter Sandman", "Metallica", "The Black Album", R.drawable.metallica ));
-        songs.add(new Song("Smells Like Teen Spirit", "Nirvana", "Nevermind", R.drawable.gunsnroses));
-        songs.add(new Song("Don't Cry", "Guns N' Roses", "Use Your Illusion", R.drawable.nirvana));
-        songs.add(new Song("Otherside", "Red Hot Chili Peppers", "Californication", R.drawable.red_hot_chili_peppers));
-        songs.add(new Song("All You Need Is Love", "The Beatles", "Yellow Submarine", R.drawable.the_beatles));
-        songs.add(new Song("In My Time Of Dying", "Led Zeppelin", "Physical Graffiti", R.drawable.led_zeppelin));
-        songs.add(new Song("Nothing Else Matters", "Metallica", "The Black Album", R.drawable.metallica));
-        songs.add(new Song("Lithium", "Nirvana", "Nevermind", R.drawable.gunsnroses));
-        songs.add(new Song("November Rain", "Guns N' Roses", "Use Your Illusion", R.drawable.gunsnroses));
-        songs.add(new Song("Around The World", "Red Hot Chili Peppers", "Californication", R.drawable.red_hot_chili_peppers));
-        songs.add(new Song("Yellow Submarine", "The Beatles", "Yellow Submarine", R.drawable.the_beatles));
-        songs.add(new Song("Kashmir", "Led Zeppelin", "Physical Graffiti", R.drawable.led_zeppelin));
-        songs.add(new Song("The Unforgiven", "Metallica", "The Black Album", R.drawable.metallica));
-        songs.add(new Song("Polly", "Nirvana", "Nevermind", R.drawable.nirvana));
-        songs.add(new Song("Knockin’ on Heaven’s Door", "Guns N' Roses", "Use Your Illusion", R.drawable.gunsnroses));
-        songs.add(new Song("Californication", "Red Hot Chili Peppers", "Californication", R.drawable.red_hot_chili_peppers));
-        songs.add(new Song("All Together Now", "The Beatles", "Yellow Submarine", R.drawable.the_beatles));
-        songs.add(new Song("Trampled Under Foot", "Led Zeppelin", "Physical Graffiti", R.drawable.led_zeppelin));
+        songs.add(new Music("Enter Sandman", "Metallica", "The Black Album", R.drawable.metallica ));
+        songs.add(new Music("Smells Like Teen Spirit", "Nirvana", "Nevermind", R.drawable.gunsnroses));
+        songs.add(new Music("Don't Cry", "Guns N' Roses", "Use Your Illusion", R.drawable.nirvana));
+        songs.add(new Music("Otherside", "Red Hot Chili Peppers", "Californication", R.drawable.red_hot_chili_peppers));
+        songs.add(new Music("All You Need Is Love", "The Beatles", "Yellow Submarine", R.drawable.the_beatles));
+        songs.add(new Music("In My Time Of Dying", "Led Zeppelin", "Physical Graffiti", R.drawable.led_zeppelin));
+        songs.add(new Music("Nothing Else Matters", "Metallica", "The Black Album", R.drawable.metallica));
+        songs.add(new Music("Lithium", "Nirvana", "Nevermind", R.drawable.gunsnroses));
+        songs.add(new Music("November Rain", "Guns N' Roses", "Use Your Illusion", R.drawable.gunsnroses));
+        songs.add(new Music("Around The World", "Red Hot Chili Peppers", "Californication", R.drawable.red_hot_chili_peppers));
+        songs.add(new Music("Yellow Submarine", "The Beatles", "Yellow Submarine", R.drawable.the_beatles));
+        songs.add(new Music("Kashmir", "Led Zeppelin", "Physical Graffiti", R.drawable.led_zeppelin));
+        songs.add(new Music("The Unforgiven", "Metallica", "The Black Album", R.drawable.metallica));
+        songs.add(new Music("Polly", "Nirvana", "Nevermind", R.drawable.nirvana));
+        songs.add(new Music("Knockin’ on Heaven’s Door", "Guns N' Roses", "Use Your Illusion", R.drawable.gunsnroses));
+        songs.add(new Music("Californication", "Red Hot Chili Peppers", "Californication", R.drawable.red_hot_chili_peppers));
+        songs.add(new Music("All Together Now", "The Beatles", "Yellow Submarine", R.drawable.the_beatles));
+        songs.add(new Music("Trampled Under Foot", "Led Zeppelin", "Physical Graffiti", R.drawable.led_zeppelin));
 
+        //        Create new instance of custom SongAdapter
         SongAdapter songAdapter = new SongAdapter(this, songs);
 
+        //        Set adapter to ListView
         ListView list = findViewById(R.id.song_list);
-
         list.setAdapter(songAdapter);
 
+//        Set onClickListener to selected item from the list
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Song selectedSong = songs.get(position);
+                Music selectedSong = songs.get(position);
 
+//                Open new activity with details about the song
                 Intent i = new Intent(SongsMainActivity.this, NowPlayingActivity.class);
                 i.putExtra("SONG_TITLE", selectedSong.getTitle());
                 i.putExtra("SONG_ARTIST", selectedSong.getArtist());
@@ -68,7 +71,7 @@ public class SongsMainActivity extends AppCompatActivity {
 
     }
 
-//    Create menu
+//    Create options menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_songs, menu);
@@ -76,7 +79,7 @@ public class SongsMainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-//    Add actions to menu items
+//    Add actions to selected menu items
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

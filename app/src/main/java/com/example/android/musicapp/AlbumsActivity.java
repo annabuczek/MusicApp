@@ -17,46 +17,50 @@ public class AlbumsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_albums);
 
-//        Set Toolbar as ActionBar
+//        Set custom Toolbar as ActionBar for activity
         Toolbar mainToolbar = findViewById(R.id.albums_toolbar);
         setSupportActionBar(mainToolbar);
 
-//        Create ArrayList of Albums
-        ArrayList<Song> albums = new ArrayList<>();
+//        Create ArrayList of Music objects, representing albums
+        ArrayList<Music> albums = new ArrayList<>();
 
-        albums.add(new Song("The Black Album", "Metallica", R.drawable.metallica_grid));
-        albums.add(new Song("Nevermind", "Nirvana", R.drawable.nirvana_grid));
-        albums.add(new Song("Use Your Illusion", "Guns N' Roses", R.drawable.gunsnroses_grid));
-        albums.add(new Song("Californication", "Red Hot Chili Peppers", R.drawable.redhotchilipeppers_grid));
-        albums.add(new Song("Yellow Submarine", "The Beatles", R.drawable.thebeatles_grid));
-        albums.add(new Song("Physical Graffiti", "Led Zeppelin", R.drawable.ledzeppelin_grid));
-        albums.add(new Song("The Black Album", "Metallica", R.drawable.metallica_grid));
-        albums.add(new Song("Nevermind", "Nirvana", R.drawable.nirvana_grid));
-        albums.add(new Song("Use Your Illusion", "Guns N' Roses", R.drawable.gunsnroses_grid));
-        albums.add(new Song("Californication", "Red Hot Chili Peppers", R.drawable.redhotchilipeppers_grid));
-        albums.add(new Song("Yellow Submarine", "The Beatles", R.drawable.thebeatles_grid));
-        albums.add(new Song("Physical Graffiti", "Led Zeppelin", R.drawable.ledzeppelin_grid));
-        albums.add(new Song("The Black Album", "Metallica", R.drawable.metallica_grid));
-        albums.add(new Song("Nevermind", "Nirvana", R.drawable.nirvana_grid));
-        albums.add(new Song("Use Your Illusion", "Guns N' Roses", R.drawable.gunsnroses_grid));
-        albums.add(new Song("Californication", "Red Hot Chili Peppers", R.drawable.redhotchilipeppers_grid));
-        albums.add(new Song("Yellow Submarine", "The Beatles", R.drawable.thebeatles_grid));
-        albums.add(new Song("Physical Graffiti", "Led Zeppelin", R.drawable.ledzeppelin_grid));
+        albums.add(new Music("The Black Album", "Metallica", R.drawable.metallica_grid));
+        albums.add(new Music("Nevermind", "Nirvana", R.drawable.nirvana_grid));
+        albums.add(new Music("Use Your Illusion", "Guns N' Roses", R.drawable.gunsnroses_grid));
+        albums.add(new Music("Californication", "Red Hot Chili Peppers", R.drawable.redhotchilipeppers_grid));
+        albums.add(new Music("Yellow Submarine", "The Beatles", R.drawable.thebeatles_grid));
+        albums.add(new Music("Physical Graffiti", "Led Zeppelin", R.drawable.ledzeppelin_grid));
+        albums.add(new Music("The Black Album", "Metallica", R.drawable.metallica_grid));
+        albums.add(new Music("Nevermind", "Nirvana", R.drawable.nirvana_grid));
+        albums.add(new Music("Use Your Illusion", "Guns N' Roses", R.drawable.gunsnroses_grid));
+        albums.add(new Music("Californication", "Red Hot Chili Peppers", R.drawable.redhotchilipeppers_grid));
+        albums.add(new Music("Yellow Submarine", "The Beatles", R.drawable.thebeatles_grid));
+        albums.add(new Music("Physical Graffiti", "Led Zeppelin", R.drawable.ledzeppelin_grid));
+        albums.add(new Music("The Black Album", "Metallica", R.drawable.metallica_grid));
+        albums.add(new Music("Nevermind", "Nirvana", R.drawable.nirvana_grid));
+        albums.add(new Music("Use Your Illusion", "Guns N' Roses", R.drawable.gunsnroses_grid));
+        albums.add(new Music("Californication", "Red Hot Chili Peppers", R.drawable.redhotchilipeppers_grid));
+        albums.add(new Music("Yellow Submarine", "The Beatles", R.drawable.thebeatles_grid));
+        albums.add(new Music("Physical Graffiti", "Led Zeppelin", R.drawable.ledzeppelin_grid));
 
+//        Create new instance of custom AlbumAdapter
         AlbumAdapter albumAdapter = new AlbumAdapter(this, albums);
 
+        //        Set adapter to GridView
         GridView grid = findViewById(R.id.albums_grid);
-
         grid.setAdapter(albumAdapter);
 
     }
 
+//    Create options menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_albums, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+
+//    Add actions to selected menu items
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

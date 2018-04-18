@@ -72,12 +72,14 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
+            android:id="@+id/shuffle_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:selectableItemBackground"
             android:src="@drawable/play_shuffle" />
 
         <ImageButton
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -85,6 +87,7 @@
             android:src="@drawable/play_back" />
 
         <ImageButton
+            android:id="@+id/play_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -92,6 +95,7 @@
             android:src="@drawable/play" />
 
         <ImageButton
+            android:id="@+id/next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -99,6 +103,7 @@
             android:src="@drawable/play_next" />
 
         <ImageButton
+            android:id="@+id/repeat_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:selectableItemBackground"

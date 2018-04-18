@@ -15,22 +15,18 @@ import java.util.ArrayList;
  * Created by aania on 16.04.2018.
  */
 
-public class SongAdapter extends ArrayAdapter<Song> {
+public class SongAdapter extends ArrayAdapter<Music> {
 
-    private ArrayList<Song> songsList;
-    private final ArrayList<Song> fullSongsList = new ArrayList<>();
 
-    SongAdapter(Activity context, ArrayList<Song> songList) {
+    SongAdapter(Activity context, ArrayList<Music> songList) {
         super(context, 0, songList);
-        this.songsList = songList;
-        fullSongsList.addAll(songsList);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        Song currentSong = getItem(position);
+        Music currentSong = getItem(position);
 
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.songs_list_item, parent, false);

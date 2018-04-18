@@ -16,9 +16,9 @@ import java.util.ArrayList;
  * Created by aania on 17.04.2018.
  */
 
-public class AlbumAdapter extends ArrayAdapter<Song> {
+public class AlbumAdapter extends ArrayAdapter<Music> {
 
-    public AlbumAdapter(Activity context, ArrayList<Song> albums){
+    public AlbumAdapter(Activity context, ArrayList<Music> albums){
         super(context, 0, albums);
     }
 
@@ -26,7 +26,7 @@ public class AlbumAdapter extends ArrayAdapter<Song> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        Song currentAlbum = getItem(position);
+        Music currentAlbum = getItem(position);
 
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.albums_grid_item, parent, false);

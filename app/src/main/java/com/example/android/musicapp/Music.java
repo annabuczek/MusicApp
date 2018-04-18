@@ -4,28 +4,24 @@ package com.example.android.musicapp;
  * Created by aania on 16.04.2018.
  */
 
-public class Song {
+public class Music {
 
     private String title;
     private String artist;
     private String album;
     private int albumCover;
 
-    public Song(String title, String artist, String album, int albumCover) {
+    public Music(String title, String artist, String album, int albumCover) {
         this.title = title;
         this.artist = artist;
         this.album = album;
         this.albumCover = albumCover;
     }
 
-    public Song(String album, String artist, int albumCover) {
+    public Music(String album, String artist, int albumCover) {
         this.album = album;
         this.artist = artist;
         this.albumCover = albumCover;
-    }
-
-    public Song(String artist) {
-        this.artist = artist;
     }
 
     public String getTitle() {
